@@ -106,6 +106,7 @@
   .works-step:last-of-type { margin-bottom: 20px; }
   .app-screen { width: 40px; }
 
+
   .map-box {
     width: 100%;
     height: auto;
@@ -125,6 +126,7 @@
     height: auto;
     padding: 30px 0;
   }
+
 
 }
 
