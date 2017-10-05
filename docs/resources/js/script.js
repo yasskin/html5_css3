@@ -104,4 +104,22 @@ $('a[href*="#"]')
 
   });
 
+  /* Maps */
+
+  var map = new GMaps({
+    div: '.map',
+    lat: 45.5215122,
+    lng: -122.6446834,
+    zoom: 14
+  });
+
+  map.addMarker({
+    lat: 45.5215122,
+    lng: -122.685,
+    title: 'Portland',
+    infoWindow: {
+      content: '<p>Our Portland Headquarters</p>'
+    }
+  });
+
 });
