@@ -107,7 +107,7 @@ $('a[href*="#"]')
   /* Maps */
 
   var map = new GMaps({
-    el: '.map',
+    el: '#map',
     lat: 45.5215122,
     lng: -122.6446834,
     zoom: 14
