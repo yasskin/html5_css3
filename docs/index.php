@@ -323,14 +323,30 @@
 
       <div id="map" class="map"></div>
 
-      <div class="form-box">
+      <div class="form-box" id="form">
 
         <div class="row">
           <h2>We're happy to hear from you</h2>
         </div>
         <div class="row">
-          <form class="contact-form" action="#" method="post">
+          <form class="contact-form" action="mailer.php" method="post">
+
             <div class="row">
+
+              <?php
+              if($_GET['success'] == 1) {
+                echo "<div class=\"form-messages success\">Thank you! Your message has been sent.</div>"
+              }
+
+              if($_GET['success'] == -1 ) {
+                echo "<div class=\"form-messages error\">Oops! Your message has been sent.</div>"
+              }
+    
+              ?>
+            </div>
+
+            <div class="row">
+
               <div class="col span-1-of-3">
                 <label for="name">Name</label>
               </div>
@@ -419,11 +435,12 @@
     <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/selectivizr@1.0.3/selectivizr.min.js"></script>
-    <script src="vendors/js/jquery.waypoints.min.js"></script>
+    <script src="resources/js/gmaps.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNzPRxjajcH7rbIJgnfBvmbxuviF7-i0w&callback=initMap"
 type="text/javascript"></script>
+    <script src="vendors/js/jquery.waypoints.min.js"></script>
     <script src="resources/js/script.js"></script>
-    <script src="resources/js/gmaps.js"></script>
+
 
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107606480-1"></script>
